@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Choose a Khmer favorite and prepare your food order.">
+  <title>Order Now — Khmer Food</title>
+  <link rel="stylesheet" href="web.css">
+  <script src="order-now.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Khmer Food home">
+      <span class="brand-mark" aria-hidden="true">KH</span>
+      <span>khmerfood<span class="brand-period">.</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="index.html#discover">Explore dishes</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="ReviewProducts.html">Review Products <span aria-hidden="true">↗</span></a>
+      <a class="header-cta" href="AboutUs.html">About Us <span aria-hidden="true">↗</span></a>
+      <a class="header-cta" href="index.html#discover">Browse the menu <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="order-main">
+    <div class="order-layout">
+      <section class="order-intro">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A good meal is just around the corner</p>
+        <h1>Order your <span>favorites.</span></h1>
+        <p>Choose a Khmer dish and tell us how you would like to receive it.</p>
+        <a class="hero-link" href="index.html#discover">Back to the food collection <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="order-panel" aria-labelledby="order-heading">
+        <p class="eyebrow section-eyebrow">Make it yours</p>
+        <h2 id="order-heading">Your order</h2>
+        <p class="order-disclaimer">Demo only: this form prepares a summary on this page and does not send an order to a restaurant.</p>
+
+        <form id="order-form">
+          <div class="order-fields">
+            <label class="order-field" for="customer-name">
+              <span>Your name</span>
+              <input id="customer-name" name="customerName" type="text" autocomplete="name" required>
+            </label>
+            <label class="order-field" for="customer-phone">
+              <span>Phone number</span>
+              <input id="customer-phone" name="phone" type="tel" autocomplete="tel" required>
+            </label>
+            <label class="order-field" for="food-choice">
+              <span>Choose a dish</span>
+              <select id="food-choice" name="food" required>
+                <option value="" selected disabled>Select a dish</option>
+                <option>Khmer Noodle</option>
+                <option>Amuk</option>
+                <option>Lok Lak</option>
+                <option>Korko</option>
+                <option>Chha Kdaw</option>
+                <option>Bay Srob</option>
+              </select>
+            </label>
+            <label class="order-field" for="quantity">
+              <span>Quantity</span>
+              <input id="quantity" name="quantity" type="number" min="1" max="20" value="1" required>
+            </label>
+            <label class="order-field" for="fulfillment">
+              <span>How would you like it?</span>
+              <select id="fulfillment" name="fulfillment">
+                <option value="delivery">Food Panda</option>
+                <option value="pickup">Grap Food</option>
+              </select>
+            </label>
+            <label class="order-field" for="delivery-address" id="address-field">
+              <span>Delivery address</span>
+              <textarea id="delivery-address" name="address" rows="3" autocomplete="street-address" required></textarea>
+            </label>
+            <label class="order-field order-field-wide" for="order-notes">
+              <span>Special instructions <span class="optional-label">(optional)</span></span>
+              <textarea id="order-notes" name="notes" rows="3" placeholder="Anything else we should know?"></textarea>
+            </label>
+          </div>
+          <button class="order-submit" type="submit">Review order <span aria-hidden="true">↗</span></button>
+        </form>
+
+        <section class="order-result" id="order-result" aria-live="polite" hidden>
+          <h3>Order summary</h3>
+          <p id="order-summary"></p>
+          <p class="order-disclaimer">This is only a local preview. Your order has not been sent.</p>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">KH</span><span>khmerfood<span class="brand-period">.</span></span></a>
+    <p>A little more joy in every bite. <span aria-hidden="true">✳</span></p>
+    <a href="index.html">Back to home ↑</a>
+  </footer>
+</body>
+</html>
